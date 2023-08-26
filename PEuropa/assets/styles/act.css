@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Lato, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+body {
+  /*background-image: url(/PEuropa/assets/img/body.jpg);*/
+  height: 100vh;
+  min-width: 100vw;
+  display: grid;
+  grid-template-rows: 3% 15% 1fr 10%;
+  grid-template-areas:
+    "zrrss"
+    "zheader"
+    "zsection"
+    "zfooter";
+  background-image: url(/PEuropa/assets/img/fondoMadera.jpg);
+  background-size: cover;
+  background-position: center;
+}
+#rrss {
+  gap: 10px;
+  color: white;
+
+  grid-area: zrrss;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  background-color: rgb(210, 89, 52);
+}
+#rrss > i {
+  font-size: 20px;
+  cursor: pointer;
+}
+#rrss > p {
+  margin-right: 6.5%;
+}
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header {
+  grid-area: zheader;
+  background-color: rgba(255, 255, 255);
+}
+
+#botonera {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+#botonera > button {
+  color: #cd4419;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  font-size: 17px;
+  margin-left: 50px;
+}
+#botonera > button:hover {
+  color: black;
+  cursor: pointer;
+}
+#sep1 {
+  color: #cd4419;
+  width: 80%;
+}
+section {
+  grid-area: zsection;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 100px;
+  margin-bottom: 100px;
+}
+
+#div4 {
+  flex-direction: column;
+  font-size: 25px;
+  color: #cd4419;
+  margin-top: 70px;
+  width: 100%;
+  height: 100px;
+}
+#div4 > img {
+  height: 100px;
+}
+
+footer {
+  grid-area: zfooter;
+  background-color: rgb(210, 89, 52);
+  color: white;
+}
+footer > h4 > a {
+  color: white;
+  text-decoration: none;
+}
+#botonera > button > a {
+  color: #cd4419;
+  text-decoration: none;
+}
+#logo {
+  height: 100%;
+}
+
+.container-input {
+  position: relative;
+  margin-left: 5%;
+}
+
+.input {
+  width: 200px;
+  padding: 10px 0px 10px 40px;
+  border-radius: 9999px;
+  border: solid 1px #333;
+  outline: none;
+  opacity: 0.8;
+}
+
+.container-input i {
+  font-size: 20px;
+  position: absolute;
+  top: 55%;
+  left: 10px;
+  transform: translate(0, -50%);
+}
+
+/*Cards*/
+.card {
+  width: 300px;
+  height: 400px;
+  background: #ffffff;
+  color: #073b4c;
+  font-weight: 600;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  position: relative;
+  transition: all 0.5s ease;
+}
+
+.card::before {
+  position: absolute;
+  width: 75px;
+  height: 75px;
+  top: 35%;
+  right: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #cd4419;
+  color: aliceblue;
+  font-weight: 800;
+  transition: all 0.5s ease;
+}
+#act1::before{
+    content: "14.00€";
+}
+#act2::before{
+    content: "6.00€";
+}
+#act3::before{
+    content: "5.00€";
+}
+#act4::before{
+    content: "5.00€";
+}
+.card__image {
+  width: initial;
+  height: 170px;
+  background: rgb(6, 214, 160);
+  background: white;
+  transition: all 0.5s ease;
+}
+.card__image>img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.title {
+  font-weight: 800;
+  font-size: 1.4em;
+}
+
+.card__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+  gap: 10px;
+}
+
+.card:hover {
+  border-top-left-radius: 35px;
+  box-shadow: 5px 5px 0px 0px #cd4419, 10px 10px 0px 0px #ce7b62,
+    15px 15px 0px 0px #eabdaf, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+}
+
+.card:hover .card__image {
+  border-top-left-radius: 25px;
+}
+
+.card:hover::before {
+  transform: scale(1.3) rotate(-30deg);
+}
